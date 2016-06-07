@@ -1,5 +1,11 @@
-#include<stdio.h>
-#include<stdlib.h>
+/* Merge sort in C */
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+//limits
+int limit_array=15;
+int limit_numbers=100;
 
 // Function to Merge Arrays L and R into A. 
 // lefCount = number of elements in L
@@ -46,19 +52,28 @@ void MergeSort(int *A,int n) {
 int main() {
 	/* Code to test the MergeSort function. */
 	
-	int A[] = {6,2,3,1,9,10,15,13,12,17}; // creating an array of integers. 
-	int i,numberOfElements;
+	//int a[] = {6,2,3,1,9,10,15,13,12,17}; // creating an array of integers. 
+	int i,j,r, numberOfElements;
+  
+  
+  int a[limit_array];
+  
+  
+  for(j=0;j<limit_array;j++){
+    r = rand() % limit_numbers;
+    a[j]=r;
+  }
 
 	// finding number of elements in array as size of complete array in bytes divided by size of integer in bytes. 
 	// This won't work if array is passed to the function because array
 	// is always passed by reference through a pointer. So sizeOf function will give size of pointer and not the array.
 	// Watch this video to understand this concept - http://www.youtube.com/watch?v=CpjVucvAc3g  
-	numberOfElements = sizeof(A)/sizeof(A[0]); 
+	numberOfElements = sizeof(a)/sizeof(a[0]); 
 
 	// Calling merge sort to sort the array. 
-	MergeSort(A,numberOfElements);
+	MergeSort(a,numberOfElements);
 
 	//printing all elements in the array once its sorted.
-	for(i = 0;i < numberOfElements;i++) printf("%d ",A[i]);
+	for(i = 0;i < numberOfElements;i++) printf("%d ",a[i]);
 	return 0;
 }
