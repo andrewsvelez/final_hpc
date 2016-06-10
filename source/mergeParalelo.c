@@ -5,7 +5,6 @@
 #include <time.h>
 #define SIZE 10
 
-#define min(a, b) (a < b ? a : b)
 
 __device__ unsigned int getIdx(dim3* threads, dim3* blocks) {
     int x;
