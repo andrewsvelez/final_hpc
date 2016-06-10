@@ -47,7 +47,12 @@ Tamaño | Ts | Tp | X = Ts/Tp
 500000|	0.090101|	0.0000713	|1263.68864
 1000000|	0.1790582|	0.0000764|	2343.693717
 
+![alt tag](gráfica.png)
+
 ## Gráfica Comparativa
+La línea roja representa la aceleración del algoritmo paralelo y la línea azul representa la aceleración del algoritmo secuencial. 
+
+![alt tag](aceleracion.png)
 
 ## Conclusiones
 
